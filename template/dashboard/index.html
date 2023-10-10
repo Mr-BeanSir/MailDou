@@ -1,0 +1,235 @@
+{{ define "dashboard/index.html"}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>控制面板 - 邮小豆</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <link href="/static/css/vendor.min.css" rel="stylesheet">
+    <link href="/static/css/app.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="app" id="app">
+
+    {{template "public/header.html"}}
+
+
+    {{template "public/sidebar.html"}}
+
+
+    <button class="app-sidebar-mobile-backdrop" data-toggle-class="app-sidebar-mobile-toggled"
+            data-toggle-target=".app"></button>
+
+
+    <div class="app-content" id="content">
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">控制面板</a></li>
+            <li class="breadcrumb-item active">主页</li>
+        </ul>
+        <h1 class="page-header" style="display: flex">
+            邮箱列表
+            <div class="ms-auto">
+                <a href="#createemail" data-bs-toggle="modal" class="btn btn-outline-theme"><i class="fa fa-plus-circle fa-fw me-1"></i>创建邮箱</a>
+                <a href="#transfer" data-bs-toggle="modal" class="btn btn-outline-theme"><i class="fa fa-exclamation-triangle fa-fw me-1"></i>转移邮箱</a>
+            </div>
+        </h1>
+     <div class="card">
+
+      <div class="tab-content p-4">
+       <div class="tab-pane fade show active" id="allTab">
+
+
+
+
+        <div class="table-responsive">
+         <table class="table table-hover text-nowrap">
+          <thead>
+          <tr>
+           <th class="pt-0 pb-2">UID</th>
+           <th class="pt-0 pb-2">邮箱</th>
+           <th class="pt-0 pb-2">密码</th>
+           <th class="pt-0 pb-2">管理</th>
+           <th class="pt-0 pb-2">删除</th>
+          </tr>
+          </thead>
+          <tbody>
+          {{range $value := .emails}}
+          <tr>
+           <td class="align-middle">{{$value.Id}}</td>
+           <td class="align-middle">{{$value.Mail}}</td>
+           <td class="align-middle">{{$value.Token}}</td>
+           <td class="align-middle">
+               <form action="/mail" method="post" target="_blank">
+                     <input type="hidden" name="usernameMail" value="{{$value.Mail}}">
+                     <input type="hidden" name="passwordMail" value="{{$value.Token}}">
+                    <button type="submit" class="btn btn-outline-theme btn-lg">管理</button>
+               </form>
+           </td>
+           <td class="align-middle">
+               <button type="button" href="#modalEdit" onclick="dele({{$value.Mail}})" data-bs-toggle="modal" class="btn btn-outline-secondary btn-lg">删除</button>
+           </td>
+          </tr>
+          {{end}}
+          </tbody>
+         </table>
+        </div>
+
+        <div class="d-md-flex align-items-center">
+         <div class="me-md-auto text-md-left text-center mb-2 mb-md-0">
+          如有问题请联系，建议使用foxmail等软件登录邮箱管理
+         </div>
+<!--          <ul class="pagination mb-0 justify-content-center">
+          <li class="page-item disabled"><a class="page-link">上一个</a></li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item"><a class="page-link" href="#">4</a></li>
+          <li class="page-item"><a class="page-link" href="#">5</a></li>
+          <li class="page-item"><a class="page-link" href="#">6</a></li>
+          <li class="page-item"><a class="page-link" href="#">下一个</a></li>
+         </ul> -->
+        </div>
+       </div>
+      </div>
+      <div class="card-arrow">
+       <div class="card-arrow-top-left"></div>
+       <div class="card-arrow-top-right"></div>
+       <div class="card-arrow-bottom-left"></div>
+       <div class="card-arrow-bottom-right"></div>
+      </div>
+     </div>
+    </div>
+
+
+    <a class="btn-scroll-top fade" data-toggle="scroll-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+
+
+    {{ template "public/themepanel.html" }}
+
+    <div class="modal fade" id="transfer">
+        <div class="modal-dialog">
+            <form action="/dashboard/transfer" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">确认要转移邮箱吗？</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card-body">
+                            <div class="form-group row mb-3">
+                                <label for="email" class="col-sm-2 col-form-label">邮件</label>
+                                <div class="col-sm-10">
+                                    <select id="email" name="email" class="form-select mb-3">
+                                        {{range $value := .emails}}
+                                        <option>{{$value.Mail}}</option>
+                                        {{end}}
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="pwd" class="col-sm-2 col-form-label">邮箱密码</label>
+                                <div class="col-sm-10">
+                                    <input type="password" name="pwd" class="form-control" id="pwd">
+                                </div>
+                            </div>
+                            <div class="form-group row mb-3">
+                                <label for="pid" class="col-sm-2 col-form-label">接收人ID</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="pid" class="form-control" id="pid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-muted">
+                            <b>提示:</b>
+                            确认转移后将无法撤销！无法撤销！
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-default" data-bs-dismiss="modal" type="button">取消</button>
+                        <button class="btn btn-outline-theme" type="submit">转移</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="createemail">
+        <div class="modal-dialog">
+            <form action="/dashboard/c_email" method="post">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">创建邮箱</h5>
+                        <button class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <div class="form-group mb-3">
+                                    <label class="form-label" for="prefix">邮箱前缀</label>
+                                    <input type="prefix" name="prefix" class="form-control" id="prefix" placeholder="prefix">
+                                </div>
+                            </div>
+                            <div class="col-xl-6">
+                                <div class="form-group mb-3">
+                                    <label class="form-label" for="exampleFormControlSelect1">邮箱后缀</label>
+                                    <select class="form-select" id="exampleFormControlSelect1">
+                                        <option>@maildou.cc</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="alert alert-muted">
+                            <b>提示:</b>
+                            只支持A-z0-9和_-的字符，不支持中文
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-outline-default" data-bs-dismiss="modal" type="button">取消</button>
+                        <button class="btn btn-outline-theme" type="submit">创建</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<!--    <div class="modal fade" id="modalEdit">-->
+<!--        <div class="modal-dialog">-->
+<!--            <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                    <h5 class="modal-title">确认要删除邮箱吗？</h5>-->
+<!--                    <button class="btn-close" data-bs-dismiss="modal" type="button"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                    <div class="mb-3">-->
+<!--                        <label class="form-label">邮箱：{{.email}}</label>-->
+<!--                    </div>-->
+<!--                    <div class="alert alert-muted">-->
+<!--                        <b>提示:</b>-->
+<!--                        功能暂不可用-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                    <button class="btn btn-outline-default" data-bs-dismiss="modal" type="button">取消</button>-->
+<!--                    <button class="btn btn-outline-theme" type="button">确定</button>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+</div>
+{{template "public/script.html"}}
+<script>
+   function dele(domain) {
+       let msg = "确认删除 " + domain + "邮箱吗？";
+       if (confirm(msg)==true){
+           window.location = "//mail.douboke.cn/dashboard/d_email/" + domain
+       }else{
+           return false;
+       }
+   }
+</script>
+</body>
+</html>
+{{end}}

@@ -1,0 +1,63 @@
+{{ define "public/sidebar.html"}}
+<div class="app-sidebar" id="sidebar">
+
+    <div class="app-sidebar-content" data-height="100%" data-scrollbar="true">
+
+        <div class="menu">
+            <div class="menu-header">Navigation</div>
+            <div class="menu-item">
+                <a class="menu-link" href="/dashboard">
+                    <span class="menu-icon"><i class="bi bi-cpu"></i></span>
+                    <span class="menu-text">控制面板</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="menu-link" href="email_compose.html">
+                    <span class="menu-icon"><i class="bi bi-pen"></i></span>
+                    <span class="menu-text">写邮件</span>
+                </a>
+            </div>
+            <div class="menu-header">Components</div>
+            <div class="menu-item active">
+                <a class="menu-link" href="/mail/list/INBOX">
+                    <span class="menu-icon"><i class="bi bi-envelope"></i></span>
+                    <span class="menu-text">收件箱</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="menu-link" href="/mail/list/Sent">
+                    <span class="menu-icon"><i class="bi bi-check"></i></span>
+                    <span class="menu-text">已发送</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="menu-link" href="/mail/list/Junk">
+                    <span class="menu-icon"><i class="bi bi-trash"></i></span>
+                    <span class="menu-text">垃圾箱</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a class="menu-link" href="/mail/list/Trash">
+                    <span class="menu-icon"><i class="bi bi-trash"></i></span>
+                    <span class="menu-text">已删除</span>
+                </a>
+            </div>
+            <div class="menu-divider"></div>
+            <div class="menu-header">Users</div>
+            <div class="menu-item">
+                <a class="menu-link" href="/profile">
+                    <span class="menu-icon"><i class="bi bi-people"></i></span>
+                    <span class="menu-text">个人信息</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="p-3 px-4 mt-auto">
+            <a class="btn d-block btn-outline-theme" href="#" target="_blank">
+                <i class="fa fa-code-branch me-2 ms-n2 opacity-5"></i> 说明文档
+            </a>
+        </div>
+    </div>
+
+</div>
+{{ end }}

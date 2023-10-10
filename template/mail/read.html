@@ -1,0 +1,119 @@
+{{ define "mail/read.html" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{.subject}} - 邮小豆</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="" name="description">
+  <meta content="" name="author">
+
+  <link href="/static/css/vendor.min.css" rel="stylesheet">
+  <link href="/static/css/app.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="app app-content-full-height" id="app">
+  {{ template "public/header.html" }}
+  {{ template "public/sidebar.html" }}
+
+  <div class="app-content p-3" id="content">
+
+    <div class="card h-100">
+
+      <div class="mailbox">
+
+        <div class="mailbox-toolbar">
+          <div class="mailbox-toolbar-item"><span class="mailbox-toolbar-text">Mailboxes</span></div>
+          <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/INBOX">收件箱</a>
+          </div>
+          <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/Sent">发件箱</a>
+          </div>
+          <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/Drafts">草稿箱</a>
+          </div>
+          <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/Junk">垃圾箱</a>
+          </div>
+          <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/Trash">已删除</a>
+          </div>
+          <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link text-white bg-white bg-opacity-15"
+                                               href="/mail/del/{{.type}}/{{.mailId}}">删除邮件 <i class="fa fa-exclamation-triangle fa-fw me-1"></i></a></div>
+        </div>
+        <div class="mailbox-body">
+          <div class="mailbox-content">
+
+            <div data-height="100%" data-scrollbar="true">
+
+              <div class="mailbox-detail" style="height: 100%">
+
+                <div class="mailbox-detail-header">
+                  <div class="d-flex">
+                    <a href="#">
+                      <img alt="" class="rounded-circle" src="/static/picture/user-1.jpg"
+                           width="40">
+                    </a>
+                    <div class="flex-fill ms-3">
+                      <div class="d-lg-flex align-items-center">
+                        <div class="flex-1">
+                          <div class="fw-600">{{.senderName}} &lt;<a class="__cf_email__">{{.from}}</a>&gt;
+                          </div>
+                          <div class="fs-13px">
+                            <span class="me-1">to</span>
+                            <a class="text-decoration-none" href="#">
+                            <span class="__cf_email__">{{.to}}</span>
+                          </a>
+                          </div>
+                        </div>
+                        <div class="fs-12px text-white text-opacity-50 text-lg-end mt-lg-0 mt-3">
+                          {{.specificDate}} <span class="d-none d-lg-inline"><br></span>{{.specificTime}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="mailbox-detail-content" style="height: 100%">
+                  <h4 class="mb-3">{{.subject}}</h4>
+
+
+                  <div class="mailbox-detail-body" style="height: 100%">
+                    <iframe src="//mail.douboke.cn/mail/content/{{.type}}/{{.mailId}}" style="height: 100%;width: 100%"></iframe>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="card-arrow">
+        <div class="card-arrow-top-left"></div>
+        <div class="card-arrow-top-right"></div>
+        <div class="card-arrow-bottom-left"></div>
+        <div class="card-arrow-bottom-right"></div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <a class="btn-scroll-top fade" data-toggle="scroll-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+
+
+  {{ template "public/themepanel.html" }}
+
+</div>
+{{template "public/script.html"}}
+</body>
+</html>
+{{ end }}

@@ -1,0 +1,103 @@
+{{ define "mail/list.html" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>邮箱列表 - 邮小豆</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    <link href="/static/css/vendor.min.css" rel="stylesheet">
+    <link href="/static/css/app.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="app app-content-full-height" id="app">
+
+    {{template "public/header.html"}}
+
+
+    {{template "public/sidebar.html"}}
+
+
+    <button class="app-sidebar-mobile-backdrop" data-toggle-class="app-sidebar-mobile-toggled"
+            data-toggle-target=".app"></button>
+
+
+    <div class="app-content p-3" id="content">
+
+        <div class="card h-100">
+
+            <div class="mailbox">
+
+                {{ template "public/toolsbars.html"}}
+
+
+                <div class="mailbox-body">
+
+                    <div class="mailbox-sidebar">
+                        <div data-height="100%" data-scrollbar="true">
+                            <div class="mailbox-list">
+                                {{ $type := .type}}
+                                {{range $value := .mailRe}}
+                                <div class="mailbox-list-item unread">
+                                    <div class="mailbox-checkbox">
+                                        <div class="form-check">
+                                            <input class="form-check-input" id="mailCheckbox{{.Uid}}" type="checkbox" value="">
+                                            <label class="form-check-label" for="mailCheckbox{{.Uid}}"></label>
+                                        </div>
+                                    </div>
+                                    <div class="mailbox-message">
+                                        <a class="mailbox-list-item-link" href="/mail/read/{{$type}}/{{.Uid}}">
+                                            <div class="mailbox-sender">
+                                                <span class="mailbox-sender-name">{{ .SenderName }}</span>
+                                                <span class="mailbox-time">{{.Time}}</span>
+                                            </div>
+                                            <div class="mailbox-title">{{.Title}}</div>
+                                            <div class="mailbox-desc">{{.SenderAddress}}</div>
+                                        </a>
+                                    </div>
+                                </div>
+                                {{end}}
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="mailbox-content d-none d-lg-block">
+                        <div data-height="100%" data-scrollbar="true" data-skip-mobile="true">
+                            <div class="mailbox-empty-message">
+                                <div class="mailbox-empty-message-icon"><i
+                                        class="bi bi-inbox text-theme text-opacity-50"></i></div>
+                                <div class="mailbox-empty-message-title">No message selected</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-arrow">
+                <div class="card-arrow-top-left"></div>
+                <div class="card-arrow-top-right"></div>
+                <div class="card-arrow-bottom-left"></div>
+                <div class="card-arrow-bottom-right"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <a class="btn-scroll-top fade" data-toggle="scroll-to-top" href="#"><i class="fa fa-arrow-up"></i></a>
+
+
+    {{ template "public/themepanel.html" }}
+
+</div>
+{{template "public/script.html"}}
+</body>
+</html>
+{{ end }}

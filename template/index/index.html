@@ -1,0 +1,610 @@
+{{ define "index/index.html" }}
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>邮小豆 - 长时邮局</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" href="https://themebeyond.com/pre/artom-prev/artom-live/img/favicon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+		<!-- CSS here -->
+<!--        <link rel="stylesheet" href="static/cs/index.css">-->
+        <link rel="stylesheet" href="/index/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/index/css/animate.min.css">
+        <link rel="stylesheet" href="/index/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="/index/css/flaticon.css">
+        <link rel="stylesheet" href="/index/css/slick.css">
+        <link rel="stylesheet" href="/index/css/default.css">
+        <link rel="stylesheet" href="/index/css/style.css">
+        <link rel="stylesheet" href="/index/css/responsive.css">
+    </head>
+    <body>
+
+        <!-- preloader -->
+        <div id="preloader">
+            <div id="loading-center">
+                <div class="loader">
+                    <div class="loader-outter"></div>
+                    <div class="loader-inner"></div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader-end -->
+
+		<!-- Scroll-top -->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <i class="fas fa-angle-up"></i>
+        </button>
+        <!-- Scroll-top-end-->
+
+        <!-- header-area -->
+        <header>
+            <div id="sticky-header" class="main-header menu-area">
+                <div class="container custom-container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
+                            <div class="menu-wrap">
+                                <nav class="menu-nav show">
+                                    <div class="logo">
+                                        <a href=""><img src="index/picture/logo.png" alt=""></a>
+                                    </div>
+                                    <div class="navbar-wrap main-menu d-none d-lg-flex">
+                                        <ul class="navigation">
+                                            <li><a href="/">首页</a></li>
+                                            <li class="menu-item-has-children"><a href="#">服务</a>
+                                                <ul class="submenu">
+                                                    <li><a href="/">邮小豆</a></li>
+                                                    <li><a href="//file-cdn.icu">托管豆</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="//jq.qq.com/?_wv=1027&k=WGgMYJUL">用户群</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="header-action d-none d-md-block">
+                                        <ul>
+                                            <li class="header-btn"><a href="http://auth.douboke.cn/index.php?p=user&a=index" class="btn">登录 <span></span></a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <!-- Mobile Menu  -->
+                            <div class="mobile-menu">
+                                <nav class="menu-box">
+                                    <div class="close-btn"><i class="fas fa-times"></i></div>
+                                    <div class="nav-logo"><a href=""><img src="index/picture/logo.png" alt="" title=""></a>
+                                    </div>
+                                    <div class="menu-outer">
+                                        <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                                    </div>
+                                    <div class="social-links">
+                                        <ul class="clearfix">
+                                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                            <li><a href="#"><span class="fab fa-facebook-square"></span></a></li>
+                                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                                            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                            <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="menu-backdrop"></div>
+                            <!-- End Mobile Menu -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-search -->
+            <div class="search-popup-wrap" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="search-close">
+                    <span><i class="fas fa-times"></i></span>
+                </div>
+                <div class="search-wrap text-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="title">你TM是真敢点，猪八戒的美梦都没你做得好</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- header-search-end -->
+        </header>
+        <!-- header-area-end -->
+
+        <!-- main-area -->
+        <main>
+
+            <!-- banner-area -->
+            <section class="banner-area banner-bg">
+                <div class="slider-active">
+                    <div class="single-slider">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-lg-6 order-0 order-lg-2">
+                                    <div class="banner-img">
+                                        <img src="/index/picture/banner_img.png" class="main-img" alt="">
+                                        <img src="/index/picture/kb_slider_shape01.png" alt="" class="shape-1">
+                                        <img src="/index/picture/kb_slider_shape02.png" alt="" class="shape-2">
+                                        <img src="/index/picture/kb_slider_shape03.png" alt="" class="shape-3">
+                                        <img src="/index/picture/kb_slider_shape04.png" alt="" class="shape-4 alltuchtopdown">
+                                        <img src="/index/picture/kb_slider_shape05.png" alt="" class="shape-5 alltuchtopdown">
+                                        <img src="/index/picture/kb_slider_shape06.png" alt="" class="shape-6">
+                                        <img src="/index/picture/kb_slider_shape07.png" alt="" class="shape-7 rotateme">
+                                        <img src="/index/picture/kb_slider_shape08.png" alt="" class="shape-8 rotateme">
+                                        <img src="/index/picture/kb_slider_shape09.png" alt="" class="shape-9">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="banner-content">
+                                        <div class="slider-caption">
+                                            <div class="inner-layer">
+                                                <span class="sub-title" data-animation="reveal-text" data-delay="1s"><span style="animation-delay: 1s;"></span>可交易邮局</span>
+                                            </div>
+                                        </div>
+                                        <div class="slider-caption">
+                                            <div class="inner-layer">
+                                                <h2 class="title" data-animation="reveal-text" data-delay="2s"><span style="animation-delay: 2s;"></span>欢迎访问!<br />
+                                                    你想干啥玩意?</h2>
+                                            </div>
+                                        </div>
+                                        <div class="slider-caption">
+                                            <div class="inner-layer">
+                                                <p data-animation="fade-in-up" data-delay="3s">邮小豆可交易邮局采用邀请制注册，连带制封杀来保证用户质量</p>
+                                            </div>
+                                        </div>
+                                        <div class="banner-btn" data-animation="fade-in-up" data-delay="3.5s">
+                                            <a href="http://auth.douboke.cn/index.php?p=user&a=index" class="btn"><i class="far fa-user"></i> 创建账号 <span></span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- banner-area-end -->
+
+            <!-- brand-area -->
+            <div class="brand-area">
+                <div class="container">
+                    <div class="container-inner-wrap">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="brand-wrapper">
+                                    <h2 class="title">目前共受到 <span>{{.people}}</span> 高质量男性信任，包括</h2>
+                                    <div class="brand-active">
+                                        <div class="brand-item">
+                                            <a href="#"><img src="/index/picture/brand_logo01.png" alt=""></a>
+                                        </div>
+                                        <div class="brand-item">
+                                            <a href="#"><img src="/index/picture/brand_logo02.png" alt=""></a>
+                                        </div>
+                                        <div class="brand-item">
+                                            <a href="#"><img src="/index/picture/brand_logo03.png" alt=""></a>
+                                        </div>
+                                        <div class="brand-item">
+                                            <a href="#"><img src="/index/picture/brand_logo04.png" alt=""></a>
+                                        </div>
+                                        <div class="brand-item">
+                                            <a href="#"><img src="/index/picture/brand_logo05.png" alt=""></a>
+                                        </div>
+                                        <div class="brand-item">
+                                            <a href="#"><img src="/index/picture/brand_logo03.png" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- brand-area-end -->
+
+            <!-- features-area -->
+            <section class="features-area pt-120 pb-90">
+                <div class="container">
+                    <div class="container-inner-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-xl-7">
+                                <div class="row features-item-wrap">
+                                    <div class="col-md-6">
+                                        <div class="features-item-box mb-30">
+                                            <div class="features-item-icon">
+                                                <img src="/index/picture/features_icon01.png" alt="">
+                                            </div>
+                                            <div class="features-item-content">
+                                                <h4>高可用性</h4>
+                                                <p>我们以用户为中心，尽力提供稳定服务，当然，仅仅是尽力。</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="features-item-box mb-30">
+                                            <div class="features-item-icon">
+                                                <img src="/index/picture/features_icon02.png" alt="">
+                                            </div>
+                                            <div class="features-item-content">
+                                                <h4>连带制封杀</h4>
+                                                <p>受邀者出现违规或恶意行为将封禁邀请者与受邀者。（特殊情况下封禁直到除管理员外的邀请者）</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="features-item-box mb-30">
+                                            <div class="features-item-icon">
+                                                <img src="/index/picture/features_icon03.png" alt="">
+                                            </div>
+                                            <div class="features-item-content">
+                                                <h4>不支持附件</h4>
+                                                <p>不支持下载附件的邮局有多少？没有！我认为这是我们的特色，不是吗？</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="features-item-box mb-30">
+                                            <div class="features-item-icon">
+                                                <img src="/index/picture/features_icon04.png" alt="">
+                                            </div>
+                                            <div class="features-item-content">
+                                                <h4>未来发展期望</h4>
+                                                <p>去他妈的发展期望，开发完就滚去学Java了</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="features-top-shape"><img src="/index/picture/features_shape01.png" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5">
+                                <div class="features-content-wrap">
+                                    <div class="features-title">
+                                        <span class="sub-title">特色</span>
+                                        <h2 class="title">邮小豆邮局特性</h2>
+                                    </div>
+                                    <p>我们将我们的特性全部展现，并非技术不行，我们称之为特性！是的，这是特性。</p>
+                                    <div class="features-list">
+                                        <ul>
+                                            <li>
+                                                <div class="icon"><i class="fas fa-check"></i></div>
+                                                <div class="content">
+                                                    <h5>管理员支持</h5>
+                                                    <p>性感管理员 7*24 小时在线封号<br />这么认真负责的管理员哪里找</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a href="//jq.qq.com/?_wv=1027&k=WGgMYJUL" class="btn"><i class="far fa-paper-plane"></i> 来哈牛逼？ <span></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-right-shape"><img src="/index/picture/features_shape02.png" alt=""></div>
+            </section>
+            <!-- features-area-end -->
+
+            <!-- customer-feedback -->
+            <section class="customer-feedback-area" data-background="/index/picture/feedback_bg.jpg">
+                <div class="container">
+                    <div class="container-inner-wrap">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="customer-feedback-title">
+                                    <h2 class="title">倾听用户的心声</h2>
+                                    <div class="feedback-slider-nav"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="customer-feedback-active">
+                                <div class="customer-feedback-item">
+                                    <div class="feedback-item-content">
+                                        <div class="feedback-tags">
+                                            <ul>
+                                                <li class="active"><a href="#">已封禁</a></li>
+                                                <li><a href="#">#辱骂管理员</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="title">RNM，退钱</h2>
+                                        <div class="feedback-client">
+                                            <div class="thumb"><img src="/index/picture/feedback_client01.png" alt=""></div>
+                                            <div class="info">
+                                                <h5>Senkin</h5>
+                                                <span>摆烂怪</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="feedback-img" data-background="/index/picture/feedback_img.png"></div>
+                                </div>
+                                <div class="customer-feedback-item">
+                                    <div class="feedback-item-content">
+                                        <div class="feedback-tags">
+                                            <ul>
+                                                <li class="active"><a href="#">已封禁</a></li>
+                                                <li><a href="#">#恶意诽谤</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2 class="title">偷看我的写真，呜呜呜</h2>
+                                        <div class="feedback-client">
+                                            <div class="thumb"><img src="/index/picture/feedback_client02.png" alt=""></div>
+                                            <div class="info">
+                                                <h5>Kona</h5>
+                                                <span>涩涩怪</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="feedback-img" data-background="/index/picture/feedback_img02.jpg"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- customer-feedback-end -->
+
+            <!-- services-area -->
+            <section class="kb-services-area">
+                <div class="container">
+                    <div class="container-inner-wrap">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6 col-lg-8">
+                                <div class="kb-section-title text-center mb-55">
+                                    <h2 class="title">选择你的在线支持</h2>
+                                    <p>就给你看看，你别TM真给我选上了</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                                <div class="kb-services-item">
+                                    <div class="icon"><i class="flaticon-money-growth"></i></div>
+                                    <div class="content">
+                                        <h5>带你买币<span class="new">免费</span></h5>
+                                        <p>管理员看到有好币时分享给你一起买</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                                <div class="kb-services-item">
+                                    <div class="icon"><i class="flaticon-credit-card"></i></div>
+                                    <div class="content">
+                                        <h5>套图共享</h5>
+                                        <p>管理员在收到写真等邮件时发给你一份</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                                <div class="kb-services-item">
+                                    <div class="icon"><i class="flaticon-bank"></i></div>
+                                    <div class="content">
+                                        <h5>邮件长时存储</h5>
+                                        <p>提供超长时间的邮件储存</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                                <div class="kb-services-item">
+                                    <div class="icon"><i class="flaticon-clutch-disc"></i></div>
+                                    <div class="content">
+                                        <h5>更多设置</h5>
+                                        <p>可以在管理员眼皮子底下看别人的邮件</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                                <div class="kb-services-item">
+                                    <div class="icon"><i class="flaticon-idea"></i></div>
+                                    <div class="content">
+                                        <h5>不错的点子</h5>
+                                        <p>管理员会收到你的点子，没了</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-10">
+                                <div class="kb-services-item">
+                                    <div class="icon"><i class="flaticon-online-service"></i></div>
+                                    <div class="content">
+                                        <h5>无限的邮箱</h5>
+                                        <p>你可以无限创建邮箱并转移给他人</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- services-area-emd -->
+
+            <!-- trial-area -->
+            <section class="trial-area">
+                <div class="container">
+                    <div class="container-inner-wrap">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="kb-trial-wrap">
+                                    <h2 class="title">不用邀请码直接注册 -></h2>
+                                    <div class="kb-trial-form">
+                                        <div class="wantwhat">
+                                            <input type="email" placeholder="Email address">
+                                            <div class="header-search"><a href="#"><button class="btn">无邀请码注册 <span></span></button></a></div>
+                                        </div>
+                                    </div>
+                                    <img src="/index/picture/trial_shape01.png" alt="" class="trial-shape top-shape wow fadeInDownBig" data-wow-delay=".3s">
+                                    <img src="/index/picture/trial_shape02.png" alt="" class="trial-shape bottom-shape wow fadeInUpBig" data-wow-delay=".3s">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- trial-area-end -->
+
+            <!-- online-support-area -->
+            <section class="online-support-area">
+                <div class="container">
+                    <div class="container-inner-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-5">
+                                <div class="online-support-img">
+                                    <img src="/index/picture/support_img.png" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <div class="online-support-content">
+                                    <h2 class="title">邮小豆人工客服</h2>
+                                    <p>去他妈的客服，没有客服，爬，别想，想都别想，做梦，春秋大梦！</p>
+                                    <div class="support-info-wrap">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <div class="support-info-item">
+                                                    <p>时效</p>
+                                                    <h2><i class="flaticon-clockwise"></i> 7*24</h2>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <div class="support-info-item">
+                                                    <p>满意度</p>
+                                                    <h2><i class="flaticon-happy"></i> 99.9%</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- online-support-area-end -->
+
+        </main>
+        <!-- main-area-end -->
+
+
+        <!-- footer-area -->
+        <footer>
+<!--            <div class="footer-top-wrap gray-bg">-->
+<!--                <div class="container">-->
+<!--                    <div class="container-inner-wrap">-->
+<!--                        <div class="row">-->
+<!--                            <div class="col">-->
+<!--                                <div class="footer-widget">-->
+<!--                                    <div class="fw-title">-->
+<!--                                        <h5 class="title">Product</h5>-->
+<!--                                    </div>-->
+<!--                                    <div class="fw-link">-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="services.html">Features</a></li>-->
+<!--                                            <li><a href="#">Pricing</a></li>-->
+<!--                                            <li><a href="#">Create a free account</a></li>-->
+<!--                                            <li><a href="#">Privacy Policy & GDPR</a></li>-->
+<!--                                            <li><a href="#">Terms of Service</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col">-->
+<!--                                <div class="footer-widget">-->
+<!--                                    <div class="fw-title">-->
+<!--                                        <h5 class="title">Company</h5>-->
+<!--                                    </div>-->
+<!--                                    <div class="fw-link">-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="about-us.html">About Us</a></li>-->
+<!--                                            <li><a href="#">FunnelJoy</a></li>-->
+<!--                                            <li><a href="blog.html">Blog</a></li>-->
+<!--                                            <li><a href="contact.html">Contact Us</a></li>-->
+<!--                                            <li><a href="#">Privacy Policy</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col">-->
+<!--                                <div class="footer-widget">-->
+<!--                                    <div class="fw-title">-->
+<!--                                        <h5 class="title">SUPPORT & TRAINING</h5>-->
+<!--                                    </div>-->
+<!--                                    <div class="fw-link">-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="contact.html">Support</a></li>-->
+<!--                                            <li><a href="">Knowledge Base</a></li>-->
+<!--                                            <li><a href="#">Webinars</a></li>-->
+<!--                                            <li><a href="#">API Documentation</a></li>-->
+<!--                                            <li><a href="#">Log In</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col">-->
+<!--                                <div class="footer-widget">-->
+<!--                                    <div class="fw-title">-->
+<!--                                        <h5 class="title">Resources</h5>-->
+<!--                                    </div>-->
+<!--                                    <div class="fw-link">-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="#">API reference</a></li>-->
+<!--                                            <li><a href="#">Status</a></li>-->
+<!--                                            <li><a href="contact.html">Get help</a></li>-->
+<!--                                            <li><a href="#">Brand assets</a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="col">-->
+<!--                                <div class="footer-widget text-left text-xl-right">-->
+<!--                                    <div class="fw-title">-->
+<!--                                        <h5 class="title">SOCIAL MEDIA CONNECT</h5>-->
+<!--                                    </div>-->
+<!--                                    <div class="fw-social">-->
+<!--                                        <ul>-->
+<!--                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>-->
+<!--                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
+<!--                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>-->
+<!--                                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>-->
+<!--                                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>-->
+<!--                                        </ul>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="copyright-wrap">
+                <div class="container">
+                    <div class="container-inner-wrap">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 col-md-9">
+                                <div class="copyright-text">
+                                    <div class="logo"><a href=""><img src="/index/picture/fw_logo.png" alt=""></a></div>
+                                    <p>Copyright &copy; 2022 邮小豆. All Rights Reserved.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-area-end -->
+
+
+
+
+
+		<!-- JS here -->
+        <script src="/index/js/jquery-3.6.0.min.js"></script>
+        <script src="/index/js/bootstrap.min.js"></script>
+        <script src="/index/js/jquery.magnific-popup.min.js"></script>
+        <script src="/index/js/owl.carousel.min.js"></script>
+        <script src="/index/js/slick.min.js"></script>
+        <script src="/index/js/main.js"></script>
+    </body>
+</html>
+{{ end }}

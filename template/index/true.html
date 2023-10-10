@@ -1,0 +1,58 @@
+{{ define "index/true.html" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>提示 - 邮小豆</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link href="/static/css/vendor.min.css" rel="stylesheet">
+    <link href="/static/css/app.min.css" rel="stylesheet">
+</head>
+<body class='pace-top'>
+<div id="app" class="app app-full-height app-without-header">
+    <div class="error-page">
+        <div class="error-page-content">
+            <div class="card mb-5 mx-auto" style="max-width: 320px;">
+                <div class="card-body">
+                    <div class="card">
+                        <div class="error-code">{{.tag}}</div>
+                        <div class="card-arrow">
+                            <div class="card-arrow-top-left"></div>
+                            <div class="card-arrow-top-right"></div>
+                            <div class="card-arrow-bottom-left"></div>
+                            <div class="card-arrow-bottom-right"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-arrow">
+                    <div class="card-arrow-top-left"></div>
+                    <div class="card-arrow-top-right"></div>
+                    <div class="card-arrow-bottom-left"></div>
+                    <div class="card-arrow-bottom-right"></div>
+                </div>
+            </div>
+            <h1>成功</h1>
+            <h3>{{.error}}</h3>
+            <hr>
+            <p class="mb-1">
+                看一看我们的其他站点：
+            </p>
+            <p class="mb-5">
+                <a href="/dashboard" class="text-decoration-none text-white text-opacity-50">邮小豆</a>
+                <span class="link-divider"></span>
+                <a href="//file-cdn.icu" class="text-decoration-none text-white text-opacity-50">托管豆</a>
+                <span class="link-divider"></span>
+                <a href="//xzdou.com" class="text-decoration-none text-white text-opacity-50">下载豆</a>
+                <span class="link-divider"></span>
+                <a href="settings.html" class="text-decoration-none text-white text-opacity-50">交流群</a>
+            </p>
+            <a href="javascript:window.history.back();" class="btn btn-outline-theme px-3 rounded-pill"><i
+                    class="fa fa-arrow-left me-1 ms-n1"></i> 返回</a>
+        </div>
+    </div>
+</div>
+<script src="/static/js/vendor.min.js" type="text/javascript"></script>
+</body>
+</html>
+{{ end }}

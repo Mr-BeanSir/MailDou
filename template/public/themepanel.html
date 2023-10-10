@@ -1,0 +1,149 @@
+{{ define "public/themepanel.html" }}
+<div class="app-theme-panel">
+  <div class="app-theme-panel-container">
+    <a class="app-theme-toggle-btn" data-toggle="theme-panel-expand" href="javascript:;"><i
+            class="bi bi-sliders"></i></a>
+    <div class="app-theme-panel-content">
+      <div class="small fw-bold text-white mb-1">Theme Color</div>
+      <div class="card mb-3">
+
+        <div class="card-body p-2">
+
+          <div class="app-theme-list">
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-pink" data-bs-container="body"
+                                                data-bs-title="Pink"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-pink" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-red" data-bs-container="body"
+                                                data-bs-title="Red"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-red" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-warning"
+                                                data-bs-container="body"
+                                                data-bs-title="Orange"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-warning" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-yellow"
+                                                data-bs-container="body"
+                                                data-bs-title="Yellow"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-yellow" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-lime" data-bs-container="body"
+                                                data-bs-title="Lime"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-lime" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-green" data-bs-container="body"
+                                                data-bs-title="Green"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-green" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item active"><a class="app-theme-list-link bg-teal"
+                                                       data-bs-container="body"
+                                                       data-bs-title="Default" data-bs-toggle="tooltip"
+                                                       data-bs-trigger="hover" data-theme-class=""
+                                                       data-toggle="theme-selector" href="javascript:;">&nbsp;</a>
+            </div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-info" data-bs-container="body"
+                                                data-bs-title="Cyan"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-info" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-primary"
+                                                data-bs-container="body"
+                                                data-bs-title="Blue"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-primary" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-purple"
+                                                data-bs-container="body"
+                                                data-bs-title="Purple"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-purple" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-indigo"
+                                                data-bs-container="body"
+                                                data-bs-title="Indigo"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-indigo" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+            <div class="app-theme-list-item"><a class="app-theme-list-link bg-gray-100"
+                                                data-bs-container="body"
+                                                data-bs-title="Gray"
+                                                data-bs-toggle="tooltip" data-bs-trigger="hover"
+                                                data-theme-class="theme-gray-200" data-toggle="theme-selector"
+                                                href="javascript:;">&nbsp;</a></div>
+          </div>
+
+        </div>
+
+
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+
+      </div>
+      <div class="small fw-bold text-white mb-1">Theme Cover</div>
+      <div class="card">
+
+        <div class="card-body p-2">
+
+          <div class="app-theme-cover">
+            <div class="app-theme-cover-item active">
+              <a class="app-theme-cover-link" data-bs-container="body"
+                 data-bs-title="Default"
+                 data-bs-toggle="tooltip" data-bs-trigger="hover" data-theme-cover-class=""
+                 data-toggle="theme-cover-selector" href="javascript:;" style="background-image: url(/static/image/cover-thumb-1.jpg);">&nbsp;</a>
+            </div>
+            <div class="app-theme-cover-item">
+              <a class="app-theme-cover-link" data-bs-container="body"
+                 data-bs-title="Cover 2"
+                 data-bs-toggle="tooltip" data-bs-trigger="hover"
+                 data-theme-cover-class="bg-cover-2" data-toggle="theme-cover-selector" href="javascript:;"
+                 style="background-image: url(/static/image/cover-thumb-2.jpg);">&nbsp;</a>
+            </div>
+            <div class="app-theme-cover-item">
+              <a class="app-theme-cover-link" data-bs-container="body"
+                 data-bs-title="Cover 3"
+                 data-bs-toggle="tooltip" data-bs-trigger="hover"
+                 data-theme-cover-class="bg-cover-3" data-toggle="theme-cover-selector" href="javascript:;"
+                 style="background-image: url(/static/image/cover-thumb-3.jpg);">&nbsp;</a>
+            </div>
+            <div class="app-theme-cover-item">
+              <a class="app-theme-cover-link" data-bs-container="body"
+                 data-bs-title="Cover 4"
+                 data-bs-toggle="tooltip" data-bs-trigger="hover"
+                 data-theme-cover-class="bg-cover-4" data-toggle="theme-cover-selector" href="javascript:;"
+                 style="background-image: url(/static/image/cover-thumb-4.jpg);">&nbsp;</a>
+            </div>
+            <div class="app-theme-cover-item">
+              <a class="app-theme-cover-link" data-bs-container="body"
+                 data-bs-title="Cover 5"
+                 data-bs-toggle="tooltip" data-bs-trigger="hover"
+                 data-theme-cover-class="bg-cover-5" data-toggle="theme-cover-selector" href="javascript:;"
+                 style="background-image: url(/static/image/cover-thumb-5.jpg);">&nbsp;</a>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="card-arrow">
+          <div class="card-arrow-top-left"></div>
+          <div class="card-arrow-top-right"></div>
+          <div class="card-arrow-bottom-left"></div>
+          <div class="card-arrow-bottom-right"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+{{end}}

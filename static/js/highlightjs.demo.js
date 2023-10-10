@@ -1,0 +1,1 @@
+var handleInitHighlightJs=function(){$('.hljs-container pre code').each(function(i,block){hljs.highlightElement(block);});};$(document).ready(function(){handleInitHighlightJs();});

@@ -1,0 +1,18 @@
+{{ define "public/toolsbars.html" }}
+<div class="mailbox-toolbar">
+  <div class="mailbox-toolbar-item"><span class="mailbox-toolbar-text">Mailboxes</span></div>
+  <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/INBOX">收件箱</a>
+  </div>
+  <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/Sent">发件箱</a>
+  </div>
+  <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/Drafts">草稿箱</a>
+  </div>
+  <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/Junk">垃圾箱</a>
+  </div>
+  <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link" href="/mail/list/Trash">已删除</a>
+  </div>
+  <div class="mailbox-toolbar-item"><a class="mailbox-toolbar-link text-white bg-white bg-opacity-15"
+                                       href="/mail/compose">New
+    Message <i class="fa fa-pen fs-12px ms-1"></i></a></div>
+</div>
+{{ end }}
